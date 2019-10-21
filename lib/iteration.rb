@@ -35,8 +35,7 @@ def find_greater_pair(src)
     while element_index < src[row_index].count do
       element1 = src[row_index][element_index]
       element2 = src[row_index][element_index+1]
-      if element1 < 
-      new_array << "I love #{element1} and #{element2} on my pizza"
+      new_array <<"#{element1} #{element2}"
       element_index+=2
     end
     row_index +=1
