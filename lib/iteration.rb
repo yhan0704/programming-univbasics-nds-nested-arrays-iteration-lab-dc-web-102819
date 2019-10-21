@@ -1,4 +1,3 @@
-
 def join_ingredients(src)
   # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   #
@@ -14,7 +13,7 @@ def join_ingredients(src)
     while element_index < src[row_index].count do
       element1 = src[row_index][element_index]
       element2 = src[row_index][element_index+1]
-      puts "I love #{element1} and #{element2} on my pizza" 
+      "I love #{element1} and #{element2} on my pizza" 
       element_index+=2
     end
     row_index +=1
