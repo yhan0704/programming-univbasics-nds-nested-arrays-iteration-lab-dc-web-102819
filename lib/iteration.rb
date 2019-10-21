@@ -1,3 +1,4 @@
+
 def join_ingredients(src)
   # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   #
@@ -6,16 +7,15 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair.
-  
   new_array=[]
   row_index = 0
   while row_index < src.count do 
     element_index = 0
     while element_index < src[row_index].count do
-      element1 = src[row_index][element_index].to_s
-      element2 = src[row_index][element_index+1].to_s
-      new_array << "I love #{element1} and #{element2}"
-      element_index +=1
+      element1 = src[row_index][element_index]
+      element2 = src[row_index][element_index+1]
+      puts "I love #{element1} and #{element2} on my pizza" 
+      element_index+=2
     end
     row_index +=1
   end
