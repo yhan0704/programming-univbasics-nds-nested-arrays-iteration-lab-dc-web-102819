@@ -64,4 +64,3 @@ def find_greater_pair(src)
     sum
 end
 
-find_greater_pair(array_3)
