@@ -46,34 +46,22 @@ def find_greater_pair(src)
 end
 
 
-def total_even_pairs(src)
-  # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
-  # if both numbers in the pair are even, then add both those numbers to the
-  # total
-  #
-  # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
-  # the number was even. Review the operator documentation if you've forgotten
-  # this!
-  
+def find_greater_pair(src)
   row_index = 0
-    out_array=[]
+    sum=0
   while row_index < src.count do 
     element_index = 0
-    in_array=[]
     while element_index < src[row_index].count do
       element1 = src[row_index][element_index]
       element2 = src[row_index][element_index+1]
-      if element1 <= element2
-      out_array << element2
-      elsif element1 >= element2
-      out_array << element1  
+      if (element1 % 2 == 0) && (element2 % 2 == 0)
+      sum += element1+element2
       end
       element_index+=2
     end
     row_index +=1
   end
-    out_array
-  
-  
-  
+    sum
 end
+
+find_greater_pair(array_3)
